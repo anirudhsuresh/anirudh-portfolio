@@ -3,8 +3,9 @@ import { useScrollPosition } from "../hooks/useScrollPosition";
 import useResizeObserver from "../hooks/useResizeObserver";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import { mainBody, repos, about, skills } from "../editable-stuff/config.js";
+import { mainBody, repos, about, skills, leadership } from "../editable-stuff/config.js";
 import { NavLink } from "./home/migration";
+// import { Footer } from './Footer.jsx';
 
 const Navigation = React.forwardRef((props, ref) => {
   // const { showBlog, FirstName } = config;
@@ -81,6 +82,14 @@ const Navigation = React.forwardRef((props, ref) => {
               Skills
             </NavLink>
           )}
+            {leadership.show && (
+          <NavLink
+            className="nav-item lead"
+            href={process.env.PUBLIC_URL + "/#leadership"}
+          >
+            Hobbies
+          </NavLink>
+        )}
         </Nav>
       </Navbar.Collapse>
     </Navbar>

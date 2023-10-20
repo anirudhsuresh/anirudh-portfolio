@@ -7,14 +7,11 @@ const Leadership = ({ heading, message, img, imageSize }) => {
     <Jumbotron
       id="leadership"
       className="m-0"
-      style={{ backgroundColor: "white" }}
+      style={{ backgroundColor: "white" , color:"black" }}
     >
       <h2 className="display-4 pb-5 text-center">{heading}</h2>
       <div className="row">
-        <div className="col-md-5">
-          <p className="lead">{message}</p>
-        </div>
-        <div className="col-md-7">
+        <div className="col-md-7 mx-auto">
           <Carousel>
             {img.map((value, index) => {
               return (

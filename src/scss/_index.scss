@@ -129,3 +129,66 @@ code {
     animation: progress 1.5s ease-in-out forwards;
   }
 }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 12px; /* Width of vertical scrollbars */
+  height: 12px; /* Height of horizontal scrollbars */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9b59b6; /* Color of the draggable scrolling handle */
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8E44AD; /* Darken the thumb's color on hover */
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(245, 245, 245, 0.3); /* Color of the track (background of scrollbar) */
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent; /* Color of the corner where both scrollbars meet */
+}
+.navbar-transparent {
+  transition: background-color 0.5s ease;
+}
+
+.navbar-scroll {
+  background-color: rgba(234, 236, 239, 0.9);
+}
+
+
+#leadership {
+  background-color: white;
+
+  h2 {
+    font-size: 2.5rem;
+    padding-bottom: 5px;
+    text-align: center;
+  }
+
+  .carousel {
+    .carousel-inner {
+      .carousel-item {
+        img {
+          object-fit: cover;  // Ensures the image covers the area, cropping if needed
+          width: 100%;        // Takes full width of the container
+          height: auto;       // Adjust height based on width to maintain aspect ratio
+          max-height: 50%;  // You can adjust this value as needed
+          
+          @media (max-width: 767px) {
+            max-height: 450px;
+          }
+
+          @media (max-width: 575px) {
+            max-height: 400px;
+          }
+        }
+      }
+    }
+  }
+}
